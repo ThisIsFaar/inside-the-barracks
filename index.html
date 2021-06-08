@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inside The Barracks</title>
+    <link rel="icon" href="img/itb.ico" sizes="16x16" type="image/png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Background Image (Coc Plain Base) -->
+    <div id="bg_img" >
+      <img src="img/bg_2.png" alt="background_image">
+    </div>
+    
+    <!-- filling some decoration in plain Base -->
+    <div class="bg_base_fill">
+      <img  src="img/fill_base.gif" alt="base_fill_image">
+    </div>
+
+    <!-- Flipped Card Result Gif -->
+    <div id="card_result_div">
+      <img id="img_reaction" src="" alt="">
+    </div>
+
+     <!-- Game Container -->
+    <div class="gameContainer"> 
+      
+      <!-- Heading -->
+      <div class="container">
+        <h1 class="text-center display-4">Find All The Troops Pairs</h1>
+      </div>
+
+      <!-- Progress Bar of founded troops -->
+      <div id="track_bar">
+        <div id="progress_bar">
+          <img class="troops_bar_1" src="img/card_2.jpg" alt="troops_bar">
+          <img class="troops_bar_2" src="img/card_2.jpg" alt="troops_bar">
+          <img class="troops_bar_3" src="img/card_2.jpg" alt="troops_bar">
+          <img class="troops_bar_4" src="img/card_2.jpg" alt="troops_bar">
+          <img class="troops_bar_5" src="img/card_2.jpg" alt="troops_bar">
+          <img class="troops_bar_6" src="img/card_2.jpg" alt="troops_bar">
+          <img class="troops_bar_7" src="img/card_2.jpg" alt="troops_bar">
+          <img class="troops_bar_8" src="img/card_2.jpg" alt="troops_bar">
+        </div>      
+      </div>
+
+      <!-- Troops cards deck-->
+      <div class="card" data-image="barbarian">
+        <img src="img/barbarian.png" class="front" alt="barbarian" />
+        <img src="img/card.png" class="back" alt="card" />
+      </div>
+      <div class="card" data-image="barbarian">
+        <img src="img/barbarian.png" class="front" alt="barbarian" />
+        <img src="img/card.png" class="back" alt="card" />
+      </div>
+      <div class="card" data-image="babydragon">
+        <img src="img/babydragon.png" class="front" alt="babydragon" />
+        <img src="img/card.png" class="back" alt="card" />
+      </div>
+      <div class="card" data-image="babydragon">
+        <img src="img/babydragon.png" class="front" alt="babydragon" />
+        <img src="img/card.png" class="back" alt="card" />
+      </div>
+      <div class="card" data-image="healer">
+        <img src="img/healer.png" class="front" alt="healer" />
+        <img src="img/card.png" class="back" alt="card" />
+      </div>
+      <div class="card" data-image="healer">
+        <img src="img/healer.png" class="front" alt="healer" />
+        <img src="img/card.png" class="back" alt="card" />
+      </div>
+      <div class="card" data-image="minion">
+        <img src="img/minion.png" class="front" alt="minion" />
+        <img src="img/card.png" class="back" alt="minion" />
+      </div>
+      <div class="card" data-image="minion">
+        <img src="img/minion.png" class="front" alt="minion" />
+        <img src="img/card.png" class="back" alt="minion" />
+      </div>
+      <div class="card" data-image="king">
+        <img src="img/king.png" class="front" alt="king" />
+        <img src="img/card.png" class="back" alt="king" />
+      </div>
+      <div class="card" data-image="king">
+        <img src="img/king.png" class="front" alt="king" />
+        <img src="img/card.png" class="back" alt="card" />
+      </div>
+      <div class="card" data-image="valkyrie">
+        <img src="img/valkyrie.png" class="front" alt="valkyrie" />
+        <img src="img/card.png" class="back" alt="card" />
+      </div>
+      <div class="card" data-image="valkyrie">
+        <img src="img/valkyrie.png" class="front" alt="valkyrie" />
+        <img src="img/card.png" class="back" alt="card" />
+      </div>
+      <div class="card" data-image="bowler">
+        <img src="img/bowler.png" class="front" alt="bowler" />
+        <img src="img/card.png" class="back" alt="card" />
+      </div>
+      <div class="card" data-image="bowler">
+        <img src="img/bowler.png" class="front" alt="bowler" />
+        <img src="img/card.png" class="back" alt="card" />
+      </div>
+      <div class="card" data-image="golem">
+        <img src="img/golem.png" class="front" alt="golem" />
+        <img src="img/card.png" class="back" alt="card" />
+      </div>
+      <div class="card" data-image="golem">
+        <img src="img/golem.png" class="front" alt="golem" />
+        <img src="img/card.png" class="back" alt="card" />
+      </div>
+    </div>
+
+    <!-- Won Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div id="vil_img_div" >
+            <img src="img/villager.png" alt="">
+          </div>
+          <div id="vil_right_div">
+            <h1>Well Done Chief!</h1>
+            <p>you have successfully trained all the troops</p>
+            <span>
+              <button type="submit" id="restart_button" >play again</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Game Sounds -->
+    <embed id="bgm" src="sounds/bgm.mp3" type="" width="0" height="0">
+    <audio id="pair_found" src="sounds/pair_found.mp3"></audio>
+    <audio id="wrong_pair" src="sounds/wrong_pair.mp3"></audio>
+    <audio id="flip_sound" src="sounds/flip.mp3"></audio>
+    <audio id="won" src="sounds/won.mp3"></audio>
+
+    <!-- loading Js File-->
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
