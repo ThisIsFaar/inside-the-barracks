@@ -1,0 +1,22 @@
+{
+  "name": "inside-the-barracks",
+  "version": "1.0.0",
+  "description": "Simple Game type of flipgame with VanillaJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThisIsFaar/inside-the-barracks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThisIsFaar/inside-the-barracks/issues"
+  },
+  "homepage": "https://github.com/ThisIsFaar/inside-the-barracks#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
